@@ -1,5 +1,11 @@
-<h1>ContactUs#new</h1>
-
 <turbo-frame id="contact-us-form">
-  <h2>Fill in the following details</h2>
+  <h1>ContactUs#new</h1>
+  <h2>Fill in the following details:</h2>
+
+  <%= form_for @message do |f| %>
+    <%= f.text_area :content %>
+    <br/>
+    <%= f.submit %>
+  <% end %>
+
 </turbo-frame>
