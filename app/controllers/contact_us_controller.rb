@@ -17,11 +17,12 @@ class ContactUsController < ApplicationController
             partial: "contact_us/message",
             locals: { message: @message }
           ))
+          broadcast_update(@message)
         end
       end
     else
       flash[:error] = "Cannot save message"
-      redirect_to welcome_path
+      redirect_to root_path
     end
   end
 
@@ -29,5 +30,14 @@ class ContactUsController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content)
+  end
+
+  def broadcast_update(message)
+    Turbo::StreamsChannel.broadcast_prepend_to(
+      :messages123,
+      target: "messages",
+      partial: "contact_us/message",
+      locals: { message: message }
+    )
   end
 end
