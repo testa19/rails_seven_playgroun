@@ -1,8 +1,6 @@
 // Entry point for the build script in your package.json
 import '@hotwired/turbo-rails'
-
-const appElement = document.getElementById('app')
-if (appElement) appElement.innerHTML = '<strong>Hello World with typesctipt!</strong>'
+import './controllers'
 
 interface IFoo {
   foo: string
