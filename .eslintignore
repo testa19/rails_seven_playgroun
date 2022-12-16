@@ -1,0 +1,5 @@
+app/assets/builds
+config/tailwind.config.js
+.eslintrc.js
+vendor
+public
