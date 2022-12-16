@@ -1,3 +1,4 @@
+tsconfig.json
 app/assets/builds
 .eslintrc.js
 *.md

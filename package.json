@@ -8,9 +8,10 @@
   },
   "scripts": {
     "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets --global-name=test_seven",
-    "build": "yarn eslint:check && build:js",
+    "build": "yarn eslint:check && yarn prettier --check app/javascript/**/*.{ts,js} && build:js",
     "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map",
     "eslint:check": "yarn eslint .",
+    "prettier:check": "yarn prettier --check .",
     "dev": "tsc-watch --noClear -p tsconfig.json --onSuccess \"yarn build:js\" --onFailure \"yarn failure:js\""
   },
   "devDependencies": {

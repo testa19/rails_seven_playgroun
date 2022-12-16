@@ -1,13 +1,13 @@
 // Entry point for the build script in your package.json
-import '@hotwired/turbo-rails'
-import './controllers'
+import "@hotwired/turbo-rails";
+import "./controllers";
 
 interface IFoo {
-  foo: string
+  foo: string;
 }
 
 const foo: IFoo = {
-  foo: 'bar',
-}
+  foo: "bar",
+};
 
-export { foo }
+export { foo };
