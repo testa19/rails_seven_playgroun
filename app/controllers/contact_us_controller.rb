@@ -5,7 +5,8 @@ class ContactUsController < ApplicationController
     @message = Message.new
   end
 
-  def index; end
+  def index
+  end
 
   def create
     @message = Message.new(message_params)
@@ -15,7 +16,7 @@ class ContactUsController < ApplicationController
           render(turbo_stream: turbo_stream.prepend(
             :messages,
             partial: "contact_us/message",
-            locals: { message: @message }
+            locals: {message: @message}
           ))
           broadcast_update(@message)
         end
@@ -37,7 +38,7 @@ class ContactUsController < ApplicationController
       :messages123,
       target: "messages",
       partial: "contact_us/message",
-      locals: { message: message }
+      locals: {message: message}
     )
   end
 end
