@@ -36,6 +36,8 @@ and will either invoke esbuild or not, depending on the result of the compilatio
   - `web: unset PORT && bin/rails server` - the command to start the Rails server
   
   - `js: yarn dev` - the new command to start tsc-watch
+  - 
+  - `css: bin/rails tailwindcss:watch` - the command to start tailwindcss in watch mode
 
   - `css: bin/rails tailwindcss:watch` - the command to start tailwindcss in watch mode
 
