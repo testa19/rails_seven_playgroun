@@ -15,7 +15,7 @@ class ContactUsController < ApplicationController
         format.turbo_stream do
           render(turbo_stream: turbo_stream.prepend(
             :messages,
-            partial: 'contact_us/message',
+            partial: "contact_us/message",
             locals: {message: @message}
           ))
           broadcast_update(@message)

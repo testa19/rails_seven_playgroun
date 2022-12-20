@@ -7,7 +7,7 @@ interface IFoo {
 }
 
 const foo: IFoo = {
-  foo: 4,
+  foo: "bar",
 };
 
 export { foo };
