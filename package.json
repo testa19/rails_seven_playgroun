@@ -12,6 +12,7 @@
     "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map",
     "eslint:check": "yarn eslint .",
     "prettier:check": "yarn prettier --check .",
+    "build:css": "postcss app/seests/stylesheets/application.tailwind.css --use autoprefixer --output app/assets/builds/tailwind.css",
     "dev": "tsc-watch --noClear -p tsconfig.json --onSuccess \"yarn build:js\" --onFailure \"yarn failure:js\""
   },
   "devDependencies": {
