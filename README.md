@@ -39,6 +39,8 @@ and will either invoke esbuild or not, depending on the result of the compilatio
   - 
   - `css: bin/rails tailwindcss:watch` - the command to start tailwindcss in watch mode
 
+  - `css: bin/rails tailwindcss:watch` - the command to start tailwindcss in watch mode
+
 ### `tsconfig.json`:
 
   - `compileOnSave` - we use ts-watch and don’t need this flag on.
