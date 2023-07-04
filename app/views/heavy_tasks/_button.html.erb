@@ -1,0 +1,7 @@
+<%= turbo_stream_from ["heavy_task_channel", current_user.to_gid_param] if user_signed_in? %>
+
+<div id="heavy_task">
+  <%= button_to "Perform heavy task",
+                heavy_tasks_path,
+                class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+</div>

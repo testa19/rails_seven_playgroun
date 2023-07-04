@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "messages", to: "contat_us#index", as: :messages
   post "messages", to: "contact_us#create"
 
+  resources :heavy_tasks, only: [:create]
   # Defines the root path route ("/")
   root "welcome#index"
 end
