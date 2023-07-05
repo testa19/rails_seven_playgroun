@@ -1,5 +1,8 @@
-<div id="heavy_task">
+<div id="heavy_task"
+data-controller="progress-bar"
+data-progress-bar-total-jobs-value="<%= total_count %>">
   <div class="h-1 w-full bg-neutral-200 dark:bg-neutral-600">
-    <div class="h-1 bg-lime-600" role="progressbar" style="width: <%= progress %>%"></div>
+    <div class="h-1 bg-lime-600" role="progressbar"
+    data-progress-bar-target="progress"></div>
   </div>
 </div>

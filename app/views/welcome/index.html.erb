@@ -2,9 +2,13 @@
 
 <p>Find me in app/views/welcome/index.html.erb</p>
 
-<%= turbo_frame_tag "contact-us-form" do %>
-  <%= link_to 'Contact Us', contact_us_new_path %>
-<% end %>
+<div class="mt-4 mb-4">
+  <%= turbo_frame_tag "contact-us-form" do %>
+    <%= link_to 'Contact Us',
+                contact_us_new_path,
+                class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  <% end %>
+</div>
 
 <%= turbo_stream_from "messages123" %>
 <div id="messages">
